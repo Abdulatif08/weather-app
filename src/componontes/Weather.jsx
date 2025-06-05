@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Hero({ currentWeather, threeDayForecast }) {
+function Weather({ currentWeather, threeDayForecast }) {
  const getIcon = (iconCode) => {
     return `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
   };
@@ -31,7 +31,7 @@ const Weather = () => {
       </div>
 <div>
  <h3 className='text-2xl font-semibold mb-5 text-#61dafb'>3-Days Forecast</h3>
-  <div className='flex flex-wrap justify-around gap-5 '>{threeDayForcast.map((dayDate, index) => (
+  <div className='flex flex-wrap justify-around gap-5 '>{threeDayForecast.map((dayDate, index) => (
        <div key={index} className="bg-[#5b6068] p-5 rounded-lg text-center flex-1 min-w-[150px] shadow-sm ">
          <p className="font-bold text-lg mb-2 text-white ">{getDay(dayData.dt)}</p>    <img src={getIcon(dayData.weather[0].icon)} alt="Forecast icon" className="w-16 h-16 mx-auto my-1" />
          <p className="text-lg font-bold mb-1 text-white ">  {Math.round(dayData.main.temp_max)}°C / {Math.round(dayData.main.temp_min)}°C  </p>
