@@ -14,7 +14,7 @@ function Header({ onSearch, currentCity }) {
 
   return (
 
-    <header className=" container mb-8 pb-5 border-b border-white border-opacity-10">
+    <header className="container mb-8 pb-5 border-b border-white border-opacity-10">
       <h1 className="text-4xl mb-2 text-blue-400">Weather App</h1> 
       <p className="text-lg text-gray-300 mb-5">
         Current City:
